@@ -605,9 +605,7 @@ function try$( selector ) {
 			url: "http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html",
 			type: 'GET',
 			success: function(res) {
-				alert(templateId);
-				var templ = $.template(templateId, res);
-				alert(templ);
+				$.template(templateId, res);
 			}
 		});
 	}
@@ -648,7 +646,9 @@ function try$( selector ) {
 		}
 		
 		//Create the 
-		$(document.body).append($.render(data, "w3c-nav-bookmarklet"));
+		var content = $.render(data, "w3c-nav-bookmarklet");
+		alert(content);
+		$(document.body).append(content);
 	}
 	
     window.w3cNavBookmarklet = w3cNavBookmarklet;
