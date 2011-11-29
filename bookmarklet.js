@@ -650,7 +650,6 @@ function try$( selector ) {
 		
 		//Create the 
 		var content = $.render(data, "w3c-nav-bookmarklet");
-		alert(content);
 		$(document.body).append(content);
 	}
 	
