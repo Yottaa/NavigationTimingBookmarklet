@@ -128,6 +128,8 @@
 				for (var names in data){
 					if (data[names] < 0){
 						data[names] = "NA";
+					}else{
+						data[names] = data[names] + "ms";
 					}
 				}
 				
@@ -163,7 +165,7 @@
 							Redirect Start
 						</div>
 						<div class="timingData">
-							{{=redirectStart}}ms				
+							{{=redirectStart}}				
 						</div>
 					</div>
 				</div>
@@ -177,7 +179,7 @@
 								Unload Start
 							</div>
 							<div class="timingData">
-	 							{{=unloadEventStart}}ms				
+	 							{{=unloadEventStart}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px"></div>
@@ -186,7 +188,7 @@
 								Unload End
 							</div>
 							<div class="timingData">
-								{{=unloadEventEnd}}ms				
+								{{=unloadEventEnd}}				
 							</div>
 						</div>
 					</div>
@@ -200,7 +202,7 @@
 							Redirect End
 						</div>
 						<div class="timingData">
-							{{=redirectEnd}}ms				
+							{{=redirectEnd}}				
 						</div>
 					</div>
 				</div>
@@ -214,7 +216,7 @@
 							Fetch Start
 						</div>
 						<div class="timingData">
-							{{=fetchStart}}ms				
+							{{=fetchStart}}				
 						</div>
 					</div>
 				</div>
@@ -229,7 +231,7 @@
 								Lookup Start
 							</div>
 							<div class="timingData">
-								{{=domainLookupStart}}ms				
+								{{=domainLookupStart}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px"></div>
@@ -238,7 +240,7 @@
 								Lookup End
 							</div>
 							<div class="timingData">
-								{{=domainLookupEnd}}ms				
+								{{=domainLookupEnd}}				
 							</div>
 						</div>
 					</div>
@@ -254,7 +256,7 @@
 								Connection Start
 							</div>
 							<div class="timingData">
-								{{=connectStart}}ms				
+								{{=connectStart}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px"></div>
@@ -263,7 +265,7 @@
 								SSL Start
 							</div>
 							<div class="timingData">
-								{{=secureConnectionStart}}ms				
+								{{=secureConnectionStart}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -272,7 +274,7 @@
 								Connection End
 							</div>
 							<div class="timingData">
-								{{=connectEnd}}ms				
+								{{=connectEnd}}				
 							</div>
 						</div>
 					</div>
@@ -287,7 +289,7 @@
 							Request Start
 						</div>
 						<div class="timingData">
-							{{=requestStart}}ms				
+							{{=requestStart}}				
 						</div>
 					</div>
 				</div>
@@ -301,7 +303,7 @@
 								Response Start
 							</div>
 							<div class="timingData">
-								{{=responseStart}}ms				
+								{{=responseStart}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -310,7 +312,7 @@
 								Response End
 							</div>
 							<div class="timingData">
-								{{=responseEnd}}ms				
+								{{=responseEnd}}				
 							</div>
 						</div>
 					</div>
@@ -326,7 +328,7 @@
 								Loading
 							</div>
 							<div class="timingData">
-								{{=domLoading}}ms				
+								{{=domLoading}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -335,7 +337,7 @@
 								Interactive
 							</div>
 							<div class="timingData">
-								{{=domInteractive}}ms				
+								{{=domInteractive}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -344,7 +346,7 @@
 								Content Loaded
 							</div>
 							<div class="timingData">
-								{{=domContentLoadedEventEnd}}ms				
+								{{=domContentLoadedEventEnd}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -353,7 +355,7 @@
 								Complete
 							</div>
 							<div class="timingData">
-								{{=domComplete}}ms				
+								{{=domComplete}}				
 							</div>
 						</div>
 					</div>
@@ -369,7 +371,7 @@
 								onLoad Start
 							</div>
 							<div class="timingData">
-								{{=loadEventStart}}ms				
+								{{=loadEventStart}}				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -378,7 +380,7 @@
 								onLoad End
 							</div>
 							<div class="timingData">
-								{{=loadEventEnd}}ms				
+								{{=loadEventEnd}}				
 							</div>
 						</div>
 					</div>
