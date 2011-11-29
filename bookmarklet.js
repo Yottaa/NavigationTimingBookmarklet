@@ -605,8 +605,8 @@ function try$( selector ) {
 			url: "http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html",
 			type: 'GET',
 			success: function(res) {
-				alert(res.responseText)
-				$.template(templateId, res.responseText);
+				alert(res)
+				$.template(templateId, res);
 			}
 		});
 	}
