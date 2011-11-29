@@ -599,7 +599,7 @@ function try$( selector ) {
 	}
 	
 	function createTemplate(templateId){
-		$.ajax({
+		$.getJSON({
 			url: "http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html",
 			type: 'GET',
 			success: function(res) {
