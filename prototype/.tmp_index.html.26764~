@@ -98,11 +98,11 @@
 		<script src="jsrender.js"></script>
 		<script>
 			$(document).ready(function(){			
-				if (window.performance){
-					showW3cNavPerformanceData();
-				}else{				
+				//if (window.performance){
+				//	showW3cNavPerformanceData();
+				//}else{				
   					$(document.body).html($( "#w3c-nav-bookmarklet-notsupported" ).render( data ));
-				}
+				//}
 			});
 			function showW3cNavPerformanceData(){
 				//Calculate all the data from the start of the page laod.
