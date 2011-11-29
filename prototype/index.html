@@ -98,6 +98,8 @@
 		<script src="jsrender.js"></script>
 		<script>
 			$(document).ready(function(){
+				
+				//Calculate all the data from the start of the page laod.
 				var data = {				
 					navigationStart: performance.timing.navigationStart - performance.timing.navigationStart,
 					unloadEventStart: performance.timing.unloadEventStart - performance.timing.navigationStart,
@@ -121,6 +123,15 @@
 					loadEventStart: performance.timing.loadEventStart - performance.timing.navigationStart,
 					loadEventEnd: performance.timing.loadEventEnd - performance.timing.navigationStart
 				};
+				
+				//if the data less than zero set it to not applicable 
+				for (var names in data){
+					if (data[names] > 0){
+						data[names] = "NA";
+					}
+				}
+				
+				//Create the 
   				$(document.body).html($( "#w3c-nav-bookmarklet" ).render( data ));
 			});
 		</script>
