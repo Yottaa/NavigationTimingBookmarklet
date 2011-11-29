@@ -600,6 +600,16 @@ function try$( selector ) {
 		}
 	}
 	
+	function createTemplate(templateId){
+		$.ajax({
+			url: "http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html",
+			type: 'GET',
+			success: function(res) {
+				$.template(templateId, res.responseText);
+			}
+		});
+
+	}
 	function showW3cNavPerformanceData(){
 		//Calculate all the data from the start of the page laod.
 		var data = {				
