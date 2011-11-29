@@ -606,7 +606,8 @@ function try$( selector ) {
 			type: 'GET',
 			success: function(res) {
 				alert(templateId);
-				$.template(templateId, res);
+				var templ = $.template(templateId, res);
+				alert(templ);
 			}
 		});
 	}
