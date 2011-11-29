@@ -1,0 +1,55 @@
+			<style>
+				.body{
+					width:345px;
+					border: #d4d4d4 1px solid;
+					position:absolute;
+					right: 10px;
+					top: 10px;
+					z-index:100000000;
+				}
+				.header{
+					padding-top: 5px;
+				}
+				.error{
+					font-family: Arial, Helvetica, sans-serif;
+					font-size: 12px;
+					color: #414141;
+					padding: 15px;
+				}
+				.footerlink>a:link{
+					font-family: Arial, Helvetica, sans-serif;
+					font-size: 12px;
+					color: #414141;
+					float: right;
+					padding-right: 10px;
+					padding-bottom: 10px;
+				}
+				.section{
+					clear: both;
+				}
+				div {
+					color: #414141;
+				}
+			</style>
+			<div class="body" id="yottaa-w3c-bookmarklet">
+				<div class="header">
+					<div style="float:left;padding-left:10px">
+						<a href="http://www.yottaa.com" target="_blank"><img border="0" src="logo75.png"/></a>
+					</div>
+					<div style="float:right">
+						<div class="footerlink" onclick="var el = document.getElementById('yottaa-w3c-bookmarklet');el.parentNode.removeChild(el);">
+							<a href="#">X Close</a>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="error">
+						Your browser does not support the W3C Navigation Timing API :(. Try to upgrade to 
+						IE 9, Firefox 7 or the latest version of Chrome.
+					</div>
+				</div>
+				<div style="clear:both"></div>
+				<div class="footerlink" style="padding-top:10px;">
+					<a href="http://www.yottaa.com" target="_blank">Visit Yottaa for more Web Performance Tools!</a>
+				</div>
+			</div>
