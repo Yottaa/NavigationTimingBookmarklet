@@ -82,6 +82,12 @@
 			.header{
 				padding-top: 5px;
 			}
+			.error{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				color: #414141;
+				padding: 15px;
+			}
 			.footerlink>a:link{
 				font-family: Arial, Helvetica, sans-serif;
 				font-size: 12px;
@@ -101,7 +107,7 @@
 				if (window.performance){
 					showW3cNavPerformanceData();
 				}else{				
-  					$(document.body).html($( "#w3c-nav-bookmarklet-notsupported" ).render( data ));
+  					$(document.body).html($( "#w3c-nav-bookmarklet-notsupported" ).render( {} ));
 				}
 			});
 			function showW3cNavPerformanceData(){
@@ -155,7 +161,7 @@
 					<div style="float:right">
 						<div class="footerlink" onclick="var el = document.getElementById('yottaa-w3c-bookmarklet');el.parentNode.removeChild(el);">
 							<a href="#">X Close</a>
-						</dic>
+						</div>
 					</div>
 				</div>
 				<div class="section">
@@ -407,11 +413,11 @@
 					<div style="float:right">
 						<div class="footerlink" onclick="var el = document.getElementById('yottaa-w3c-bookmarklet');el.parentNode.removeChild(el);">
 							<a href="#">X Close</a>
-						</dic>
+						</div>
 					</div>
 				</div>
 				<div class="section">
-					<div class="height1">
+					<div class="error">
 						Your browser does not support the W3C Navigation Timing API :(. Try to upgrade to 
 						IE 9, Firefox 7 or the latest version of Chrome.
 					</div>
