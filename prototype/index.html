@@ -126,7 +126,7 @@
 				
 				//if the data less than zero set it to not applicable 
 				for (var names in data){
-					if (data[names] < 0){
+					if (data[names] < 0 || data[names] == "NaN"){
 						data[names] = "NA";
 					}else{
 						data[names] = data[names] + "ms";
