@@ -152,7 +152,7 @@
 							Redirect Start
 						</div>
 						<div class="timingData">
-							{{=navigationStart}}ms				
+							{{=redirectStart}}ms				
 						</div>
 					</div>
 				</div>
@@ -189,7 +189,7 @@
 							Redirect End
 						</div>
 						<div class="timingData">
-							10ms				
+							{{=redirectEnd}}ms				
 						</div>
 					</div>
 				</div>
@@ -203,7 +203,7 @@
 							Fetch Start
 						</div>
 						<div class="timingData">
-							10ms				
+							{{=fetchStart}}ms				
 						</div>
 					</div>
 				</div>
@@ -218,7 +218,7 @@
 								Lookup Start
 							</div>
 							<div class="timingData">
-								20ms				
+								{{=domainLookupStart}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px"></div>
@@ -227,7 +227,7 @@
 								Lookup End
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=domainLookupEnd}}ms				
 							</div>
 						</div>
 					</div>
@@ -243,7 +243,7 @@
 								Connection Start
 							</div>
 							<div class="timingData">
-								20ms				
+								{{=connectStart}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px"></div>
@@ -252,7 +252,7 @@
 								SSL Start
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=secureConnectionStart}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -261,7 +261,7 @@
 								Connection End
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=connectEnd}}ms				
 							</div>
 						</div>
 					</div>
@@ -276,7 +276,7 @@
 							Request Start
 						</div>
 						<div class="timingData">
-							10ms				
+							{{=requestStart}}ms				
 						</div>
 					</div>
 				</div>
@@ -290,7 +290,7 @@
 								Response Start
 							</div>
 							<div class="timingData">
-								20ms				
+								{{=responseStart}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -299,7 +299,7 @@
 								Response End
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=responseEnd}}ms				
 							</div>
 						</div>
 					</div>
@@ -315,7 +315,7 @@
 								Loading
 							</div>
 							<div class="timingData">
-								20ms				
+								{{=domLoading}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -324,7 +324,7 @@
 								Interactive
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=domInteractive}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -333,7 +333,7 @@
 								Content Loaded
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=domContentLoadedEventEnd}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -342,7 +342,7 @@
 								Complete
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=domComplete}}ms				
 							</div>
 						</div>
 					</div>
@@ -358,7 +358,7 @@
 								onLoad Start
 							</div>
 							<div class="timingData">
-								20ms				
+								{{=loadEventStart}}ms				
 							</div>
 						</div>
 						<div style="clear:both;height:10px;"></div>
@@ -367,7 +367,7 @@
 								onLoad End
 							</div>
 							<div class="timingData">
-								30ms				
+								{{=loadEventEnd}}ms				
 							</div>
 						</div>
 					</div>
