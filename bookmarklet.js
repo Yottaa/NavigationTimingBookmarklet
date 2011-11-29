@@ -599,10 +599,7 @@ function try$( selector ) {
 	}
 	
 	function createTemplate(templateId){
-		$.getJSON({
-			url: "http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html",
-			type: 'GET',
-			success: function(res) {
+		$.getJSON("http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html", function(res) {
 				$.template(templateId, res);
 				if (window.performance){
 					showW3cNavPerformanceData();
@@ -610,7 +607,7 @@ function try$( selector ) {
 					$(document.body).append($.render({}, "w3c-nav-bookmarklet-notsupported"));
 				}
 			}
-		});
+		);
 	}
 	
 	function showW3cNavPerformanceData(){
