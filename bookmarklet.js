@@ -596,7 +596,7 @@ function try$( selector ) {
 			showW3cNavPerformanceData();
 		}else{				
 			createTemplate("w3c-nav-bookmarklet-notsupported");
-			$(document.body).html($("w3c-nav-bookmarklet-notsupported").render({}));
+			$(document.body).html($.render({}, "w3c-nav-bookmarklet-notsupported"));
 		}
 	}
 	
@@ -605,7 +605,7 @@ function try$( selector ) {
 			url: "http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html",
 			type: 'GET',
 			success: function(res) {
-				alert(res);
+				alert(templateId);
 				$.template(templateId, res);
 			}
 		});
@@ -647,7 +647,7 @@ function try$( selector ) {
 		}
 		
 		//Create the 
-		$(document.body).html($("w3c-nav-bookmarklet").render( data ));
+		$(document.body).html($.render(data, "w3c-nav-bookmarklet"));
 	}
 	
     window.w3cNavBookmarklet = w3cNavBookmarklet;
