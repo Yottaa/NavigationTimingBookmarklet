@@ -599,7 +599,7 @@ function try$( selector ) {
 			$(document.body).append($.render({}, "w3c-nav-bookmarklet-notsupported"));
 		}
 	}
-	d
+	
 	function createTemplate(templateId){
 		$.ajax({
 			url: "http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html",
