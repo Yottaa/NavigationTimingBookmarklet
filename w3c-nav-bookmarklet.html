@@ -23,7 +23,9 @@
 			}			
 			
 			function closeBookmarklet(){
-				$(window).remove();
+				var el = document.getElementById('yottaa-w3c-bookmarklet');
+				el.parentNode.removeChild(el);
+				$("#w3c-nav-iframe", window.parent).remove();
 			}
 		</script>
 	</head>
