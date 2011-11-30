@@ -81,7 +81,7 @@ $(document).ready(function(){
 });
 </pre>
 
-The final phase of the bookmarklet is handed over to the <strong>$.render();</strong> and the bookmarklet UI is displayed using 
+The final phase of the bookmarklet is handed over to <strong>$.render();</strong> and the bookmarklet UI is displayed using 
 a template. This greatly simplifies the development of the UI, and means i can concentrate on the features. Why is this simpler?
 Because it allows me to just use HTML in its natural form and let the <strong>$.render();</strong> function insert the data UI where 
 it needs to go. 
