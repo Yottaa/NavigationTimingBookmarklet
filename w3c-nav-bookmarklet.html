@@ -8,7 +8,7 @@
 		<script src="json2.js"></script>
 		<script>
 			$(document).ready(function(){	
-				var data = window.location.hash;
+				var data = window.location.hash.substring(1);
 				alert(data);		
 				if (data != ""){
 					data = JSON.parse(data);
