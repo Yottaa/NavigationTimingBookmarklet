@@ -2,13 +2,13 @@
 
 This bookmarklet display the timing information that is available using the [W3C NavigationTiming API](http://www.w3.org/TR/navigation-timing/). I found this is a simpler way at seeing what the performance
 of a page is verse opening up the developer tools every time. This bookmarklet can be used in:<br/>
-- Latest Chrome Build
-- Firefox 7+
-- IE 9+ (Still need to test)
+<ul><li>Latest Chrome Build</li>
+<li>Firefox 7+</li>
+<li>IE 9+ (Still need to test)</li></ul>
 
 On mobile devices is can be used on:<br/>
-- Windows Phone 7.5 (Mango)
-- Andriod Ice cream sandwich
+<ul><li>Windows Phone 7.5 (Mango)</li>
+<li>Andriod Ice cream sandwich</li></ul>
 
 ## Using It
 
