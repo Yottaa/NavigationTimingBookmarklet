@@ -8,9 +8,11 @@
 		<script src="json2.js"></script>
 		<script>
 			$(document).ready(function(){	
-				var data = window.location.hash;		
+				var data = window.location.hash;
+				alert(data);		
 				if (data != ""){
-					showW3cNavPerformanceData(JSON.parse(data));
+					data = JSON.parse(data);
+					showW3cNavPerformanceData(data);
 				}else{				
   					$(document.body).html($("#w3c-nav-bookmarklet-notsupported").render({}));
 				}
