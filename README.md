@@ -37,7 +37,7 @@ javascript:(function(){
 	var w3cnavjs=document.createElement('SCRIPT');
 	w3cnavjs.type='text/javascript';
 	w3cnavjs.src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js';
-	document.getElementsByTagName('head').appendChild(w3cnavjs);
+	document.getElementsByTagName('head')[0].appendChild(w3cnavjs);
 })();
 </pre>
 
