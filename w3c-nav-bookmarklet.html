@@ -21,6 +21,10 @@
 				//Create the 
   				$(document.body).html($("#w3c-nav-bookmarklet").render( data ));
 			}			
+			
+			function closeBookmarklet(){
+				$(window).remove();
+			}
 		</script>
 	</head>
 	<body style="padding:0px;margin:0px">
@@ -129,7 +133,7 @@
 						<a href="http://www.yottaa.com" target="_blank"><img border="0" src="logo75.png"/></a>
 					</div>
 					<div style="float:right">
-						<div class="footerlink" onclick="var el = document.getElementById('yottaa-w3c-bookmarklet');el.parentNode.removeChild(el);">
+						<div class="footerlink" onclick="closeBookmarklet()">
 							<a href="#">X Close</a>
 						</div>
 					</div>
@@ -414,7 +418,7 @@
 						<a href="http://www.yottaa.com" target="_blank"><img border="0" src="logo75.png"/></a>
 					</div>
 					<div style="float:right">
-						<div class="footerlink" onclick="var el = document.getElementById('yottaa-w3c-bookmarklet');el.parentNode.removeChild(el);">
+						<div class="footerlink" onclick="closeBookmarklet()">
 							<a href="#">X Close</a>
 						</div>
 					</div>
