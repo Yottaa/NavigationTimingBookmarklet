@@ -16,6 +16,12 @@ On mobile devices is can be used on:<br/>
 
 <a href="(javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8'%7D)();" title="Drag to Bookmark Toolbar">Drag this link to your bookmark toolbar or save as a bookmark by right clicking</a>
 
-### Step two - Go to a webpage [Yottaa's Homepage](http://www.yottaa.com)
+### Step two - Go to a webpage 
+
+You can try it on [Yottaa's Homepage](http://www.yottaa.com)
 
 ### Step three - Click the bookmark in toolbar
+
+You will see something that looks similar to the following.
+
+
