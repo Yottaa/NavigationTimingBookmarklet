@@ -32,13 +32,13 @@ So how does this bookmarklet's architecture resolve this problems?
 
 The bookmarklet link is very simple and calls out to an 
 
-<code><pre>javascript:(function(){
+<pre>javascript:(function(){
 	var w3cnavjs=document.createElement('SCRIPT');
 	w3cnavjs.type='text/javascript';
 	w3cnavjs.src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js';
 	document.getElementsByTagName('head').appendChild(w3cnavjs);
 })();
-</pre></code>
+</pre>
 
 The code for the bookmarklet does only two things:
 
@@ -46,11 +46,11 @@ The code for the bookmarklet does only two things:
 2.) Encodes it into a JSON String
 3.) Creates an iframe and passes the data to the iframe in the hash
 
-<code><pre>$(document.body).append('<iframe id="w3c-nav-iframe" frameborder="0" height="660px" width="350px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px;z-index:999999999" border="0"></iframe>');
+<pre>$(document.body).append('<iframe id="w3c-nav-iframe" frameborder="0" height="660px" width="350px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px;z-index:999999999" border="0"></iframe>');
 	
 	//Add the data as the hash. The iframe will pull the data.
 	$('#w3c-nav-iframe').attr('src', "http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.html#"+JSON.stringify(data));
-</pre></code>
+</pre>
 
 ### Why use an iframe?
 
@@ -63,7 +63,7 @@ add a new feature changing the minified HTML string would have been worse than b
 
 The source of my iframe is "w3c-nav-bookmarklet.html" file which when loaded will run the following code:
 
-<code><pre>$(document).ready(function(){	
+<pre>$(document).ready(function(){	
 		//Need to pull off the "#" from the string
 		var data = window.location.hash.substring(1);
 		
@@ -76,7 +76,7 @@ The source of my iframe is "w3c-nav-bookmarklet.html" file which when loaded wil
 			$(document.body).html($("#w3c-nav-bookmarklet-notsupported").render({}));
 		}
 	});
-<pre></code>
+</pre>
 
 ### Why use github to host?
 
