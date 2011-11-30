@@ -82,23 +82,25 @@ $(document).ready(function(){
 </pre>
 
 The final phase of the bookmarklet is handed over to the <strong>$.render();</strong> and the bookmarklet UI is displayed using 
-a template. This greatly simplifies the development of the UI, and means i can concentrate on the features.
+a template. This greatly simplifies the development of the UI, and means i can concentrate on the features. Why is this simpler?
+Because it allows me to just use HTML in its natural form and let the <strong>$.render();</strong> function insert the data UI where 
+it needs to go. 
 
 <pre>
-<div class="section">
-	<div class="leftBox height1">
+&lt;div class="section"&gt;
+	&lt;div class="leftBox height1"&gt;
 		Redirect
-	</div>
-	<div class="rightBox">
-		<div class="timingName">
+	&lt;/div&gt;
+	&lt;div class="rightBox"&gt;
+		&lt;div class="timingName"&gt;
 			Redirect Start
-		</div>
-		<div class="timingData">
-			<!-- This will be replaced with the data --> 
+		&lt;/div&gt;
+		&lt;div class="timingData"&gt;
+			&lt;!-- This will be replaced with the data --&gt; 
 			{{=redirectStart}}				
-		</div>
-	</div>
-</div>
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
 ### Why use github to host?
