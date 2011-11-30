@@ -32,7 +32,8 @@ So how does this bookmarklet's architecture resolve this problems?
 
 The bookmarklet link is very simple and calls out to an 
 
-<pre>javascript:(function(){
+<pre>
+javascript:(function(){
 	var w3cnavjs=document.createElement('SCRIPT');
 	w3cnavjs.type='text/javascript';
 	w3cnavjs.src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js';
@@ -46,10 +47,11 @@ The code for the bookmarklet does only two things:
 2.) Encodes it into a JSON String
 3.) Creates an iframe and passes the data to the iframe in the hash
 
-<pre>$(document.body).append('<iframe id="w3c-nav-iframe" frameborder="0" height="660px" width="350px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px;z-index:999999999" border="0"></iframe>');
+<pre>
+$(document.body).append('<iframe id="w3c-nav-iframe" frameborder="0" height="660px" width="350px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px;z-index:999999999" border="0"></iframe>');
 	
-	//Add the data as the hash. The iframe will pull the data.
-	$('#w3c-nav-iframe').attr('src', "http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.html#"+JSON.stringify(data));
+//Add the data as the hash. The iframe will pull the data.
+$('#w3c-nav-iframe').attr('src', "http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.html#"+JSON.stringify(data));
 </pre>
 
 ### Why use an iframe?
@@ -63,19 +65,40 @@ add a new feature changing the minified HTML string would have been worse than b
 
 The source of my iframe is "w3c-nav-bookmarklet.html" file which when loaded will run the following code:
 
-<pre>$(document).ready(function(){	
-		//Need to pull off the "#" from the string
-		var data = window.location.hash.substring(1);
-		
-		//if the string is empty that means there is no data and the browser does
-		//not support the API.
-		if (data != ""){
-			data = JSON.parse(data);
-			showW3cNavPerformanceData(data);
-		}else{				
-			$(document.body).html($("#w3c-nav-bookmarklet-notsupported").render({}));
-		}
-	});
+<pre>
+$(document).ready(function(){	
+	//Need to pull off the "#" from the string
+	var data = window.location.hash.substring(1);
+	
+	//if the string is empty that means there is no data and the browser does
+	//not support the API.
+	if (data != ""){
+		data = JSON.parse(data);
+		showW3cNavPerformanceData(data);
+	}else{				
+		$(document.body).html($("#w3c-nav-bookmarklet-notsupported").render({}));
+	}
+});
+</pre>
+
+The final phase of the bookmarklet is handed over to the <strong>$.render();</strong> and the bookmarklet UI is displayed using 
+a template. This greatly simplifies the development of the UI, and means i can concentrate on the features.
+
+<pre>
+<div class="section">
+	<div class="leftBox height1">
+		Redirect
+	</div>
+	<div class="rightBox">
+		<div class="timingName">
+			Redirect Start
+		</div>
+		<div class="timingData">
+			<!-- This will be replaced with the data --> 
+			{{=redirectStart}}				
+		</div>
+	</div>
+</div>
 </pre>
 
 ### Why use github to host?
