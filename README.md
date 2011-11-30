@@ -1,7 +1,7 @@
 ## Summary
 
-This bookmarklet display the timing information that is available using the [W3C NavigationTiming API](http://www.w3.org/TR/navigation-timing/). I found this is a simpler way at seeing what the performance
-of a page is verse opening up the developer tools every time. This bookmarklet can be used in:<br/>
+This bookmarklet display the timing information that is available using the [W3C NavigationTiming API](http://www.w3.org/TR/navigation-timing/). 
+I found this is a simpler way at seeing what the performance of a page is verse opening up the developer tools every time. This bookmarklet can be used in:<br/>
 <ul><li>Latest Chrome Build</li>
 <li>Firefox 7+</li>
 <li>IE 9+ (Still need to test)</li></ul>
@@ -12,19 +12,11 @@ On mobile devices is can be used on:<br/>
 
 ## Using It
 
-### Step one - Add it to your bookmarks
+I have written a blog about this and you can find the bookmarket instructions there. Why? I tried to get the code for the 
+bookmarklet in the markdown but it strips the javascript. This makes sense 
 
-<a href="(javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8'%7D)();" title="Drag to Bookmark Toolbar">Drag this link to your bookmark toolbar or save as a bookmark by right clicking</a>
+[Blog article on the Bookmarklet](http://blog.yottaa.com/2011/11/standardizing-web-performance)
 
-<pre><code>
-(javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8';})();
-</pre></code>
-### Step two - Go to a webpage 
+## TODO
 
-You can try it on [Yottaa's Homepage](http://www.yottaa.com)
-
-### Step three - Click the bookmark in toolbar
-
-You will see something that looks similar to the following.
-
-
+Make the bookmarklet scroll to the top of the page.
