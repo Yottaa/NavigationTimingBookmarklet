@@ -511,7 +511,7 @@ replace(/(?:^|:|,)(?:\s*\[)+/g, ''))) {
 	 * Creates the iframe for the content.
 	 */
 	function createIFrame(){
-		$(document.body).append('<iframe id="w3c-nav-iframe" frameborder="0" height="600px" width="400px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px" border="0"></iframe>');
+		$(document.body).append('<iframe id="w3c-nav-iframe" frameborder="0" height="650px" width="350px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px" border="0"></iframe>');
 	}
 	
 	function showW3cNavPerformanceData(){
