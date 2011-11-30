@@ -599,7 +599,7 @@ function try$( selector ) {
 	}
 	
 	function createTemplate(templateId){
-		$.getJSON("http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html", function(res) {
+		$.getJSON("http://yottaa.github.com/NavigationTimingBookmarklet/"+templateId+".html?callback=?", function(res) {
 				$.template(templateId, res);
 				if (window.performance){
 					showW3cNavPerformanceData();
