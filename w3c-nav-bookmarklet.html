@@ -5,11 +5,12 @@
 		<title>Prototype of the UI</title>
 		<script src="jquery-1.7.1.min.js"></script>
 		<script src="jsrender.js"></script>
+		<script src="json2.js"></script>
 		<script>
 			$(document).ready(function(){	
 				var data = window.location.hash;		
-				if (window.location.hash){
-					showW3cNavPerformanceData(data);
+				if (data != ""){
+					showW3cNavPerformanceData(JSON.parse(data));
 				}else{				
   					$(document.body).html($("#w3c-nav-bookmarklet-notsupported").render({}));
 				}
@@ -21,7 +22,7 @@
 			}			
 		</script>
 	</head>
-	<body style="background-color:#00f">
+	<body style="padding:0px;margin:0px">
 		<script id="w3c-nav-bookmarklet" type="text/x-jquery-tmpl">
 			<style>
 				.leftBox {
