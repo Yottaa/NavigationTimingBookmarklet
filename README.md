@@ -17,6 +17,66 @@ bookmarklet in the markdown but it strips the javascript. This makes sense
 
 [Blog article on the Bookmarklet](http://blog.yottaa.com/2011/11/standardizing-web-performance)
 
+## Development Approach
+
+I took a different a to building the bookmarklet. The only components to the booklet are jquery, ViewJS the new jquery templates and github. 
+Before starting, I looked at a lot of bookmarklet but they all kind of sucked at their approach:
+
+1.) Need to hand build the DOM
+2.) Hosting the bookmarklet was a pain
+3.) The way the javascript was compiled into a single file was not easy to maintain
+
+So how does this bookmarklet's architecture resolve this problems?  
+
+### Bookmarklet link
+
+The bookmarklet link is very simple and calls out to an 
+
+<code><pre>
+javascript:(function(){
+	var w3cnavjs=document.createElement('SCRIPT');
+	w3cnavjs.type='text/javascript';
+	w3cnavjs.src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js';
+	document.getElementsByTagName('head').appendChild(w3cnavjs);
+})();
+</pre></code>
+
+The code for the bookmarklet does only two things:
+
+1.) Captures the W3C NavigationTiming Data
+2.) Encodes it into a JSON String
+3.) Creates an iframe and passes the data to the iframe in the hash
+
+<code><pre>
+
+	$(document.body).append('<iframe id="w3c-nav-iframe" frameborder="0" height="660px" width="350px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px;z-index:999999999" border="0"></iframe>');
+	
+	//Add the data as the hash. The iframe will pull the data.
+	$('#w3c-nav-iframe').attr('src', "http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.html#"+JSON.stringify(data));
+
+</pre></code>
+
+### Why use an iframe?
+
+I tried several ways to do this. Ideally I would not need to use an iframe but because the template was loaded from a file on the server. 
+I needed to yottaa.github.com domain, which caused a cross domain issue. Yes, I could have encoded the HTML into a string and had it 
+embedded in the JavaScript but this would have increased the maintenance cost of the bookmarklet. If i wanted to change any UI or 
+add a new feature changing the minified HTML string would have been worse than building the DOM structure by JavaScript alone.
+
+
+### Why use github to host?
+
+Even though i am the CTO of yottaa.com, deploying stuff into production easily required working with our operations team or setting up a separate 
+server environment. The bookmarklet requires no server side other than serving files so, i figured using the Github pages would simplify everything.
+
+Now when i want to release a new version i can just push the code into my gh-pages branch and the new version will automatically be deployed. 
+No need for a separate deployment script for the website.
+
+### Setting up github pages
+
+This was fairly straightforward; i just followed the [instructions here](http://pages.github.com/)
+
+
 ## TODO
 
 Make the bookmarklet scroll to the top of the page.
