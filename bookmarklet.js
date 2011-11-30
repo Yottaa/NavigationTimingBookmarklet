@@ -503,7 +503,7 @@ replace(/(?:^|:|,)(?:\s*\[)+/g, ''))) {
 			showW3cNavPerformanceData();
 		}else{				
 			//ADD
-			$('#w3c-nav-iframe').attr('src', "http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.htmL");
+			$('#w3c-nav-iframe').attr('src', "http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.html");
 		}
 	}
 	
