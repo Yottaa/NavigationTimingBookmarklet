@@ -12,7 +12,5 @@ On mobile devices is can be used on:<br/>
 
 ## Using It
 
-[Drag this link to your bookmark toolbar][bookmarklet]
-
-[bookmarklet]: (javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8'%7D)(); "Drag to Bookmark Toolbar"
+<a href="(javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8'%7D)();" title="Drag to Bookmark Toolbar">Drag this link to your bookmark toolbar</a>
 
