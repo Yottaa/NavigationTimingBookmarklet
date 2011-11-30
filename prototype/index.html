@@ -3,8 +3,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<title>Prototype of the UI</title>
-		<script src="jquery-1.7.1.min.js"></script>
-		<script src="jsrender.js"></script>
+		<script src="../jquery-1.7.1.min.js"></script>
+		<script src="../jsrender.js"></script>
 		<script>
 			$(document).ready(function(){			
 				if (window.performance){
@@ -51,8 +51,12 @@
 				//Create the 
   				$(document.body).html($("#w3c-nav-bookmarklet").render( data ));
 			}
+			
+			$(document).ready(function(){			
+				$(document.body).append('<iframe id="pcl_frame" frameborder="0" height="100%" width="100%" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px" border="0"></iframe>');
+				$('#pcl_frame').attr('src', "http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.html");
+			});
 		</script>
-		<script src="http://yottaa.github.com/NavigationTimingBookmarklet/w3c-nav-bookmarklet.html"></script>
 	</head>
 	<body style="background-color:#00f">
 		<script id="w3c-nav-bookmarklet" type="text/x-jquery-tmpl">
