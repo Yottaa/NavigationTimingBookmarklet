@@ -17,7 +17,10 @@ On mobile devices is can be used on:<br/>
 <a href="(javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8'%7D)();" title="Drag to Bookmark Toolbar">Drag this link to your bookmark toolbar or save as a bookmark by right clicking</a>
 
 <pre><code>
-(javascript:(function()%7Bdocument.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8'%7D)();
+(javascript:(function(){
+		document.body.appendChild(document.createElement('script')).src='http://yottaa.github.com/NavigationTimingBookmarklet/bookmarklet.js?bob=8';
+	}
+)();
 </pre></code>
 ### Step two - Go to a webpage 
 
