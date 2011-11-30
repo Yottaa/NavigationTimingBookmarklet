@@ -20,3 +20,5 @@ bookmarklet in the markdown but it strips the javascript. This makes sense
 ## TODO
 
 Make the bookmarklet scroll to the top of the page.
+Make the bookmarklet go aways smoothly. Now it leaves the iframe behind.
+
