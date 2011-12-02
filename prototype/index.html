@@ -49,9 +49,25 @@
 				}
 				
 				//Create the 
-  				$(document.body).html($("#w3c-nav-bookmarklet").render( data ));
+  				//$(document.body).html($("#w3c-nav-bookmarklet").render( data ));
+
+			    // One-shot position request.
+			    navigator.geolocation.getCurrentPosition(capturePosition, captureError);
 			}
-		</script>
+		
+		    function capturePosition(position) {
+		      	// Show a map centered at (position.coords.latitude, position.coords.longitude).
+				data = {
+					userAgent: navigator.userAgent,
+					latitude: position.coords.latitude,
+					longitude: position.coords.longitude
+				};
+  				$(document.body).html($("#w3c-nav-bookmarklet-context").render( data ));
+		    }	
+		    function captureError(e){
+		    	alert("captureError("+e.message+")");
+		    }
+    	</script>
 	</head>
 	<body style="background-color:#00f">
 		<script id="w3c-nav-bookmarklet" type="text/x-jquery-tmpl">
@@ -405,13 +421,13 @@
 				</div>
 			</div>
 		</script>
-		<script id="w3c-nav-bookmarklet-notsupported" type="text/x-jquery-tmpl">
+		<script id="w3c-nav-bookmarklet-context" type="text/x-jquery-tmpl">
 			<style>
 				.body{
 					width:345px;
 					border: #d4d4d4 1px solid;
 					position:absolute;
-					right: 10px;
+					left: 10px;
 					top: 10px;
 					z-index:100000000;
 					background-color:#fff;
@@ -453,8 +469,12 @@
 				</div>
 				<div class="section">
 					<div class="error">
-						Your browser does not support the W3C Navigation Timing API :(. Try to upgrade to 
-						IE 9, Firefox 7 or the latest version of Chrome.
+						{{=userAgent}}
+					</div>
+				</div>
+				<div class="section">
+					<div class="error">
+						({{=latitude}}, {{=longitude}})
 					</div>
 				</div>
 				<div style="clear:both"></div>
