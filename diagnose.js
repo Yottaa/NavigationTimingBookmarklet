@@ -142,10 +142,12 @@
 	}
 	
 	window.yo_sendOutput = function(){
-		window.title = JSON.stringify(output);	
+		window.document.title = JSON.stringify(output);	
 		log("-- Start Output");
-		log(window.title);
+		log(window.document.title);
 		log("-- End Output");
+		
+		top.document.title = window.document.title;
 	}
 	
 	window.JSON = {};	
