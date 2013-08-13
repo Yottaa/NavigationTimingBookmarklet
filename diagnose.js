@@ -147,9 +147,9 @@
 		log(window.document.title);
 		log("-- End Output");
 		
+		document.domain = "localhost:3000";
 		top.document.title = window.document.title;
 		top.window.jim = "ASDASDASDASDASDD";
-		document.location = "localhost:3000";
 	}
 	
 	window.JSON = {};	
