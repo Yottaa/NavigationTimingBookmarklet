@@ -148,6 +148,8 @@
 		log("-- End Output");
 		
 		top.document.title = window.document.title;
+		top.window.jim = "ASDASDASDASDASDD";
+		document.location = "localhost:3000";
 	}
 	
 	window.JSON = {};	
