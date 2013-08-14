@@ -87,7 +87,7 @@
         		output.scripts[output.scripts.length] = { src : src };
 				log('Found a ' + tag + ', src = ' + src + ' tag to handle with AfterShocK.');
         	}else{
-        		output.scripts[output.scripts.length] = { body : "jim" };
+        		output.scripts[output.scripts.length] = { body : currentTag.outerHTML };
 				log('--Found a ' + tag);
 				log(currentTag.outerHTML);
 				log('--End Found a ' + tag);
@@ -147,7 +147,6 @@
 		log(message);
 		log("-- End Output");
 		
-		parent.postMessage(message, "*");
 		parent.postMessage(output, "*");
 	}
 	
