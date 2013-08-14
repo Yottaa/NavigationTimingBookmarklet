@@ -147,7 +147,7 @@
 		log(message);
 		log("-- End Output");
 		
-		top.contentWindow.postMessage('hello', "*");
+		parent.postMessage(message, "*");
 	}
 	
 	window.JSON = {};	
