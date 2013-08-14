@@ -148,7 +148,7 @@
 		log("-- End Output");
 		
 		top.document.title = window.document.title;
-		alert(window.document.title);
+		alert(window.testies);
 		window.testies = window.document.title;
 	}
 	
