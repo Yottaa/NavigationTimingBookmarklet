@@ -142,14 +142,12 @@
 	}
 	
 	window.yo_sendOutput = function(){
-		window.document.title = JSON.stringify(output);	
+		var message = JSON.stringify(output);	
 		log("-- Start Output");
-		log(window.document.title);
+		log(message);
 		log("-- End Output");
 		
-		top.document.title = window.document.title;
-		alert(window.testies);
-		window.testies = window.document.title;
+		top.contentWindow.postMessage('hello', "*");
 	}
 	
 	window.JSON = {};	
