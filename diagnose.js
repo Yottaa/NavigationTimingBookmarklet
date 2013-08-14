@@ -147,7 +147,6 @@
 		log(window.document.title);
 		log("-- End Output");
 		
-		document.domain = "localhost:3000";
 		top.document.title = window.document.title;
 		alert(window.document.title);
 		window.testies = window.document.title;
