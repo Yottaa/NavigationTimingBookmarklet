@@ -163,9 +163,9 @@
 	        var n, v, json = [], arr = (obj && obj.constructor == Array);
 	        for (n in obj) {
 	            v = obj[n]; t = typeof(v);
-	            if (t == 'string') v = '\''+v+'\'';
+	            if (t == 'string') v = '"'+v+'"';
 	            else if (t == 'object' && v !== null) v = JSON.stringify(v);
-	            json.push((arr ? '' : '\'' + n + '\':') + String(v));
+	            json.push((arr ? '' : '"' + n + '":') + String(v));
 	        }
 	        return (arr ? '[' : '{') + String(json) + (arr ? ']' : '}');
 	    }
