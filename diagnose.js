@@ -149,7 +149,7 @@
 		
 		document.domain = "localhost:3000";
 		top.document.title = window.document.title;
-		top.window.jim = "ASDASDASDASDASDD";
+		window.testies = "ASDASDASDASDASDD";
 	}
 	
 	window.JSON = {};	
