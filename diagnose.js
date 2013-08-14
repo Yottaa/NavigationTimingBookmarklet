@@ -148,6 +148,7 @@
 		log("-- End Output");
 		
 		parent.postMessage(message, "*");
+		parent.postMessage(output, "*");
 	}
 	
 	window.JSON = {};	
