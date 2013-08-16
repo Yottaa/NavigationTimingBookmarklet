@@ -29,10 +29,14 @@
 		log: true, 
 		autoCapture: true,
 		delayTime: 5000
-	};
+	},
 	
-	var winH = 0;
-	var output = {
+  	// Vertical offset in px. Used for preloading images while scrolling
+	offset = 100,
+
+	winH = 0,
+	
+	output = {
 		images: [],
 		scripts: [],
 		iframes: []
